@@ -4,10 +4,7 @@ import psycopg2
 import subprocess
 
 from django.conf import settings
-try:
-    from django.contrib.gis.db import models
-except (ImportError, IOError):
-    from django.db import models
+from django.db import models
 from django.db.backends.signals import connection_created
 
 from psycopg2.extras import register_hstore, HstoreAdapter
